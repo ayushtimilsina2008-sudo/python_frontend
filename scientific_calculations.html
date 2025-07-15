@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics System Control Panel</title>
+    <style>
+        /* Minimalist, professional engineering dark theme */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #161b22;
+            padding: 20px 40px;
+            border-bottom: 1px solid #30363d;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #58a6ff;
+            font-size: 24px;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            color: #8b949e;
+            font-size: 14px;
+        }
+        .main-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .panel-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .card-header {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #ff7b72;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 8px;
+        }
+        .form-row {
+            margin-bottom: 12px;
+        }
+        label {
+            display: block;
+            font-size: 12px;
+            color: #8b949e;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            color: #c9d1d9;
+            box-sizing: border-box;
+            font-size: 13px;
+        }
+        .action-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #238636;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .action-btn:hover {
+            background-color: #2ea043;
+        }
+        .terminal-box {
+            margin-top: 15px;
+            background-color: #0d1117;
+            border: 1px solid #21262d;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #7ee787;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Robotics & Automation Control Panel</h1>
+    <p>Front-End UI Prototype for Script Subsystems Architecture</p>
+</header>
+
+<div class="main-container">
+
+    <!-- Card 1: Math Engine -->
+    <div class="panel-card">
+        <div class="card-header">[CORE] scientific_operation.py</div>
+        <div class="form-row">
+            <label>Select Physics Constant Query Key:</label>
+            <select>
+                <option>speed_of_light (c)</option>
+                <option>acceleration_of_gravity (g)</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label>Mass Parameter Input (kg):</label>
+            <input type="number" value="0.50">
+        </div>
+        <button class="action-btn">EXECUTE EQUATION VECTOR</button>
+        <div class="terminal-box">CONSOLE: Awaiting execution...</div>
+    </div>
+
+    <!-- Card 2: Sensor Fusion Node -->
+    <div class="panel-card">
+        <div class="card-header">[NAV] obstacles_detection.py</div>
+        <div class="form-row">
+            <label>Camera Bounding Box Size (px):</label>
+            <input type="number" value="125">
+        </div>
+        <div class="form-row">
+            <label>LiDAR Distance Target Range (m):</label>
+            <input type="number" value="1.95">
+        </div>
+        <button class="action-btn">INITIALIZE DISTANCE FUSION</button>
+        <div class="terminal-box">CONSOLE: Awaiting data feeds...</div>
+    </div>
+
+    <!-- Card 3: Actuator Joint Controller -->
+    <div class="panel-card">
+        <div class="card-header">[HARDWARE] robot_joint_controller.py</div>
+        <div class="form-row">
+            <label>Current Joint Center position:</label>
+            <input type="text" value="90°" disabled style="opacity: 0.6;">
+        </div>
+        <div class="form-row">
+            <label>Target Steering Rotation Input (0-180°):</label>
+            <input type="number" value="135">
+        </div>
+        <button class="action-btn">SEND STEP MOTOR METRICS</button>
+        <div class="terminal-box">CONSOLE: Actuator loop ready.</div>
+    </div>
+
+</div>
+
+</body>
+</html>
