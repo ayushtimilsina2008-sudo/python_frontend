@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Assistant Conversation Hub</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f0f2f5; padding: 40px; margin: 0; }
+        .chat-wrapper { max-width: 500px; margin: 0 auto; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; height: 450px; }
+        .chat-header { background: #0078ff; color: white; padding: 15px; font-weight: bold; text-align: center; }
+        .chat-history { flex: 1; padding: 20px; background: #f9f9f9; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+        .bubble { max-width: 75%; padding: 12px; border-radius: 16px; font-size: 14px; line-height: 1.4; }
+        .ai { background: #e9ecef; align-self: flex-start; color: #333; }
+        .user { background: #0078ff; color: white; align-self: flex-end; }
+        .input-box { display: flex; padding: 10px; background: #ffffff; border-top: 1px solid #eee; }
+        .input-box input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 20px; padding-left: 15px; outline: none; }
+        .send-btn { background: #0078ff; color: white; border: none; padding: 0 20px; margin-left: 8px; border-radius: 20px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="chat-wrapper">
+    <div class="chat-header">Heuristic Learning Assistant AI</div>
+    <div class="chat-history">
+        <div class="bubble ai">Hello Ayush! Outline your current study topic or engineering problem.</div>
+        <div class="bubble user">I am designing a script to control an array loop architecture.</div>
+    </div>
+    <div class="input-box">
+        <input type="text" placeholder="Type a technical question...">
+        <button class="send-btn">Send</button>
+    </div>
+</div>
+</body>
+</html>
